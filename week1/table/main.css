@@ -1,0 +1,25 @@
+td, th {
+	border: 0.05em solid black;
+	padding: 5px;
+}
+table.special td.highlight,
+table.special th.highlight {
+	background-color: purple;
+}
+
+
+td.highlight,
+th.highlight {
+	background-color: red;
+	color: pink;
+	font-weight: bold;
+}
+td.inactive,
+th.inactive {
+	background-color: grey;
+}
+table {
+	border-spacing: 0;
+	border: 0.05em solid black;
+	margin-bottom: 20px;
+}
