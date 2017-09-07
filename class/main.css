@@ -1,0 +1,47 @@
+span {
+	background-color: orange;
+}
+.ex1, .ex3 {
+	display: block;
+}
+.ex2, .ex4 {
+	display: inline-block;
+}
+.ex3 {
+	width: 300px;
+	margin: 0 auto;
+}
+.ex4 {
+	width: 200px;
+	padding: 30px;
+}
+.fish {
+	float:left;
+	clear: both;
+}
+.column {
+	width: 50%;
+	height: 400px;
+	/*display:inline-block;*/
+	float: right;
+}
+footer {
+	background-color: green;
+	border: 3px dashed orange;
+	height: 100px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+#col1 {
+	background-color: red;
+}
+#col2 {
+	background-color: blue;
+}
+
+
+
+
+
