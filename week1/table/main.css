@@ -1,3 +1,11 @@
+/* Turn off underline for any link that appears inside of an h1 */
+h1 a {
+	text-decoration: none;
+}
+a.nounderline {
+	text-decoration: none;
+}
+
 td, th {
 	border: 0.05em solid black;
 	padding: 5px;
