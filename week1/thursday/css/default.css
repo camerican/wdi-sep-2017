@@ -12,6 +12,13 @@ body > header nav ul {
 	padding-left:0;
 	margin: 0;
 }
+.zebra a {
+	text-decoration: none;
+	color: inherit;
+}
+.zebra a:visited {
+	color: maroon;
+}
 body > header h2 {
 	margin: 0;
 	display: inline-block;
@@ -24,6 +31,67 @@ body > header nav li {
 	display: inline-block;
 	padding: 0 20px;
 	line-height: 75px;
+}
+#main {
+	position: relative;
+	margin: 0 100px;
+}
+/* Float technique */
+/*#col1, #col2 {
+	float: left;
+}
+#col1 {
+	width: 60%;
+}
+#col2 {
+	width: 40%;
+}*/
+/* Inline block Technique */
+/*#col1, #col2 {
+	display: inline-block;
+	vertical-align: top;
+}
+#col1 {
+	width: 60%;
+}
+#col2 {
+	width: 40%;
+}*/
+/* positioning layout technique */
+#main {
+	position: relative;
+}
+#col1, #col2 {
+	position: absolute;
+	top: 0;
+	bottom: 50px;
+}
+#col1 {
+	left: 0;
+	width: 60%;
+}
+#col2 {
+	right: 0;
+	width: 40%;
+}
+footer {
+	position: absolute;
+	bottom: 0;
+	height: 40px;
+}
+.ball {
+	width: 300px;
+	height: 300px;
+	background-color: red;
+	border-radius: 50%;
+	position: absolute;
+	left: 40px;
+	top: 0px;
+}
+.ball em {
+	position: absolute;
+	top: 40px;
+	left:60px;
 }
 .zebra li {
 	background-color: lightgreen;
