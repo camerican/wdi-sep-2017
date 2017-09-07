@@ -1,0 +1,33 @@
+body {
+	font-size: 32px;
+	margin: 0;
+}
+body > header {
+	background-color: rgba(30,200,30,0.75);
+	height: 75px;
+	padding: 0 100px;
+}
+body > header nav ul {
+	list-style-type: none;
+	padding-left:0;
+	margin: 0;
+}
+body > header h2 {
+	margin: 0;
+	display: inline-block;
+	line-height: 75px;
+}
+body > header nav {
+	float: right;
+}
+body > header nav li {
+	display: inline-block;
+	padding: 0 20px;
+	line-height: 75px;
+}
+.zebra li {
+	background-color: lightgreen;
+}
+.zebra li:nth-child(2n) {
+	background-color: lightblue;
+}
