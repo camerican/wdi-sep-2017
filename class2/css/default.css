@@ -1,0 +1,111 @@
+.profile {
+	width: 400px;
+	height: 400px;
+	display: inline-block;
+	background-size: cover;
+	position:relative;
+}
+.profile .slack-name {
+	position: absolute;
+	bottom: 30px;
+	height: 30px;
+	line-height: 30px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	background-color: rgba(50,50,200,0.5);
+	opacity: 0;
+	transition-property: all;
+	transition-duration: 1s;
+}
+.profile:hover .slack-name {
+	opacity: 1;
+	transform: rotateZ(360deg);
+	bottom:60px;
+}
+.profile .first-name,
+.profile .last-name {
+	position: absolute;
+	bottom: 0;
+	height: 30px;
+	line-height: 30px;
+	font-size: 24px;
+	background-color: rgba(200,50,50,0.5);
+	transition-property: all;
+	transition-duration: 1s;
+}
+.profile:hover .first-name,
+.profile:hover .last-name {
+	height: 60px;
+	line-height: 60px;
+	font-size: 48px;
+	font-weight: bold;
+	background-color: rgba(255,50,50,0.8);
+	color: #fff;
+}
+.profile .first-name {
+	left: 0;
+	width: 50%;
+	text-align: right;
+}
+.profile .last-name {
+	right: 0;
+	width: 50%;
+}
+#kgallagher {
+	background-image: url(https://ca.slack-edge.com/T03JJLPSP-U6W4SAPRT-835ed0912220-512);
+}
+#lisamae {
+	background-image: url(https://ca.slack-edge.com/T03JJLPSP-U6WT2E4JJ-8f5202eea9c9-512);
+}
+#mahima {
+	background-image: url(https://ca.slack-edge.com/T03JJLPSP-U6XC01KA8-394be3c3ce97-512);
+}
+#jcalderone {
+	background-image: url(https://ca.slack-edge.com/T03JJLPSP-U6ZECGEUF-0bcc31931324-512);
+}
+#mjfloyd3 {
+	background-image: url(https://ca.slack-edge.com/T03JJLPSP-U6VH16CQ1-73d7094a66ba-512);
+}
+#vpkirby002 {
+	background-image: url(https://ca.slack-edge.com/T03JJLPSP-U6XNWCY6T-c4c69c2d80d6-512);
+}
+#ckusuma {
+	background-image: url(https://ca.slack-edge.com/T03JJLPSP-U6VBJ2URE-7255eee92e8d-512);
+}
+#jborbon {
+	background-image: url(https://ca.slack-edge.com/T03JJLPSP-U6Y9JEA03-ga39e4c660cc-512);
+}
+#martinezvea {
+	background-image: url(https://ca.slack-edge.com/T03JJLPSP-U2QPMNQE7-b9b7fd877945-512);
+}
+#vbraxtvi {
+	background-image: url(https://ca.slack-edge.com/T03JJLPSP-U6X55A4LX-c20130205319-512);
+}
+#daniel1995db {
+	background-image: url(https://ca.slack-edge.com/T03JJLPSP-U6YFN9WER-174ec73e16dc-512);
+}
+#mikeydlane {
+	background-image: url(https://ca.slack-edge.com/T03JJLPSP-U6W6NQZNU-9f74e019eb18-512);
+}
+#donchiam {
+	background-image: url(https://ca.slack-edge.com/T03JJLPSP-U6VUTD7UH-647172c98c2b-512);
+}
+#johnmurphy {
+	background-image: url(https://ca.slack-edge.com/T03JJLPSP-U6ZECGYG7-g54d1d822fae-512);
+}
+#sherill {
+	background-image: url(https://ca.slack-edge.com/T03JJLPSP-U6XRR4EM7-bd0547d3f086-512);
+}
+#sophiebushman {
+	background-image: url(https://ca.slack-edge.com/T03JJLPSP-U6W4DK8QJ-6f074c9e8a30-512);
+}
+#teixeiramichael5 {
+	background-image: url(https://ca.slack-edge.com/T03JJLPSP-U6WAD2J93-g3318995132d-512);
+}
+#josuegv7 {
+	background-image: url(https://ca.slack-edge.com/T03JJLPSP-U6VD69QF2-2e108b45e7f8-512);
+}
+#barnese3 {
+	background-image: url(https://ca.slack-edge.com/T03JJLPSP-U6W7RCB34-g1a37e409440-512);
+}
