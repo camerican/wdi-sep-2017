@@ -21,4 +21,4 @@
 | `git checkout [name]` | Switch to a branch | `git checkout cam` |
 | `git branch -d [name]` | Delete a branch (can't be on that branch at the time!) | `git branch -d cam` |
 | `git checkout -b [name]` | Create and switch to a branch | `git checkout -b cam` |
-| `git merge [name]` | Merge a master branch into checked out branch | `git merge master` |
+| `git merge [name]` | Merge a branch into checked out branch | `git merge master` |
