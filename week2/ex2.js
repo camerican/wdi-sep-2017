@@ -38,6 +38,33 @@ for( var key in interests ) {
 // console.log( "favColor: ", interests.favColor );
 // console.log( "interests: ", interests.interests.join(", ") );
 
+// Loops and Logic Exercises
+
+// ex1:
+
+// write a conditional to check whether a number is less than 10
+
+// if( /* some conditional */ ) {
+//   /* Block */
+// } else {
+//   /* Block */
+// }
+
+//var myNum = 60;
+var myNum = parseInt(prompt("Please enter a number"));
+//var myNum = ~~prompt("Please enter a number");
+
+if( myNum < 10 ) {
+  console.log("Your number is less than ten");
+} else {
+  console.log(`Your number of ${myNum} is greater than or equal to ten`);
+ // alert("Your number of " + myNum + " is greater than or equal to ten");
+}
+
+
+
+
+
 
 
 
