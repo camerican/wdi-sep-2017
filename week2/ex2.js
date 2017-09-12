@@ -50,19 +50,33 @@ for( var key in interests ) {
 //   /* Block */
 // }
 
-//var myNum = 60;
-var myNum = parseInt(prompt("Please enter a number"));
+var myNum = 60;
+//var myNum = parseInt(prompt("Please enter a number"));
 //var myNum = ~~prompt("Please enter a number");
 
 if( myNum < 10 ) {
   console.log("Your number is less than ten");
+} else if( myNum > 10 ) {
+  console.log(`Your number of ${myNum} is greater than ten`);
 } else {
-  console.log(`Your number of ${myNum} is greater than or equal to ten`);
+  console.log("You picked 10!  What are the odds?!");
  // alert("Your number of " + myNum + " is greater than or equal to ten");
 }
 
+addNums1(3,4);
+function addNums1( num1, num2 ) {
+  console.log(num1 + num2);
+  return num1 + num2;
+}
+//addNums2(3,4);
+var addNums2 = function( num1, num2) {
+  return num1 + num2;
+};
 
 
+function adder( val1, val2 ){
+  return ~~val1 + 10 + ~~val2;
+}
 
 
 
