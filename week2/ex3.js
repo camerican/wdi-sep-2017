@@ -25,6 +25,10 @@ function hr() {
 //     return "An old shoe";
 //   }
 // }
+// ++i;
+// i++;
+// i += 1;
+// i = i + 1;
 
 function doorPrize( doorNumber ) {
   var prizes = ["A boat","A car","An old shoe"];
@@ -33,4 +37,23 @@ function doorPrize( doorNumber ) {
 }
 
 console.log( "You won: ", doorPrize( prompt("Pick a door") ) );
+
+
+// Friends Loop
+// declare a variable and initialize it to an array of strings 
+var friends = ["Oliver","Sam","Krystal"];
+for(var i=0; i<friends.length; i++){
+  console.log( friends[i] + " is my friend" );
+}
+
+// for( var i in friends ) {
+//   console.log( friends[i] + " is my friend" );
+// } 
+
+friends.forEach(function(value,index) {
+  console.log( value + " is my friend");
+});
+
+
+
 
