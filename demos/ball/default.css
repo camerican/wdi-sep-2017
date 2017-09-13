@@ -1,0 +1,12 @@
+#ball {
+	position: fixed;
+	top:50%;
+	left:50%;
+	width:100px;
+	height: 100px;
+	transform: translateX(-50%) translateY(-50%);
+	border-radius: 50%;
+	border: 2px solid black;
+	background-color: red;
+	transition: top, left 1s;
+}
