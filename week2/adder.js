@@ -8,6 +8,20 @@ document.addEventListener("DOMContentLoaded",function(){
     var num2 = document.getElementById("num2").value;
     // add them together (after converting them to numbers)
     // and update the innerText of #result
-    document.getElementById("result").innerText = parseInt(num1) + parseInt(num2);
+    document.getElementById("result").innerText = parseInt(num1,10) + parseInt(num2,10);
   });
 });
+// Operate on all inputs:
+
+// // getElements selectors don't implement forEach :'(
+// [].forEach.call( document.getElementsByTagName("inputs"), 
+//   function( el ) { 
+//     el.value = "Yay"; 
+//   }
+// );
+
+// // Nicer querySelectorAll implements forEach!!
+// document.querySelectorAll("input").forEach(function( el ) { 
+//   el.value = "Yay"; 
+// });
+
