@@ -87,4 +87,20 @@ header nav a {
 	top: 20px;
 	background-color: rgba(50,200,200,0.8);
 }
+/* modal rules */
+#modal {
+	width: 600px;
+	height: 400px;
+	background-color: rgba(200,200,200,0.8);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	z-index: 1;
+	display:none;
+}
+body.overlay #modal {
+	display: block;
+}
+
 
