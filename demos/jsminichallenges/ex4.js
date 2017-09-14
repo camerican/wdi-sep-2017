@@ -7,18 +7,25 @@ document.addEventListener("DOMContentLoaded",function(){
   elUsername = document.getElementById("username");
   elPassword = document.querySelector("input[name=password]");
   console.log( elPassword );
-  elForm.addEventListener("submit",function(event){
-    // stop the submission from going through
-    event.preventDefault();
-    // make sure password is 12345678
-    // AND make sure username is less than 14 characters
-    // THEN update the elOutput with what happened
-    if( elPassword.value == "12345678" && elUsername.value.length < 14 ) {
-      //success!
-      elOutput4.innerText = "Congrats on knowing your username and password!";
-    } else { //failure
-      elOutput4.innerText = "Incorrect username or password";
-    }
-
-  });
+  elForm.addEventListener("submit",processForm);
 });
+
+function processForm(event){
+  // stop the submission from going through
+  event.preventDefault();
+  // make sure password is 12345678
+  // AND make sure username is less than 14 characters
+  // THEN update the elOutput with what happened
+  if( elPassword.value == "12345678" && elUsername.value.length < 14 ) {
+    //success!
+    elOutput4.innerText = "Congrats on knowing your username and password!";
+  } else { //failure
+    elOutput4.innerText = "Incorrect username or password";
+  }
+}
+
+setTimeout(function(){
+  elForm.style.display = "none";
+}, 2000);
+
+
