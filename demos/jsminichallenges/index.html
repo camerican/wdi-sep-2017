@@ -16,6 +16,47 @@
 
 	<p>When the user presses that key, the text of the h1 should show the value of the key they have pressed.
 	Example: If the user presses "J", the text inside the h1 should be "J".</p>
+
+	<hr />
+
+	<h2>Ex 4</h2>
+
+	<p>Create an HTML page with a form. The form should include inputs for a username, password, an h1 tag as well as a button. In a Javascript file, write code that does the following things when the button is pressed:</p>
+	<ul>
+		<li>checks that the password is 12345678</li>
+		<li>checks that the username is less than 14 characters in length</li>
+		<li>if the info in the form is correct, have Javascript change the text in the h1 to say "Congrats on knowing your username and password!"</li>
+		<li>if anything is wrong, send an alert message saying "Incorrect username or password"</li>
+	</ul>
+
+	<!-- <form id="login">
+		<label for="username">User</label>
+		<input type="text" name="username" id="username" /><br />
+		<label for="password">Pass</label>
+		<input type="password" name="password" id="password" /><br />
+		<input type="submit" value="Login" />
+		<button>Login</button>
+	</form>
+ -->
+ <h1 id="output4"></h1>
+	<form id="login">
+	<table>
+		<tr>
+			<td><label for="username">User</label></td>
+			<td><input type="text" name="username" id="username" /></td>
+		</tr>
+		<tr>
+			<td><label for="password">Pass</label></td>
+			<td><input type="password" name="password" id="password" /></td>
+		</tr>
+		<tr>
+			<td colspan="2"><input type="submit" value="Login" /></td>
+		</tr>
+		<!-- <button>Login</button> -->
+	</table>
+	</form>
+
 	<script src="ex3.js"></script>
+	<script src="ex4.js"></script>
 </body>
 </html>
