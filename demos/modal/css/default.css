@@ -1,0 +1,90 @@
+/* header styling */
+body {
+	margin: 0;
+}
+img.hero {
+	width: 100%;
+}
+main {
+	padding: 0 100px;
+}
+header {
+	background-color: rgba(200,20,20,0.8);
+	color: #fff;
+	padding: 20px 100px;
+	font-size: 1.5em;
+}
+header nav,
+#logo {
+	display: inline-block;
+}
+#logo {
+	font-weight: bold;
+}
+header nav {
+	float: right;
+}
+header nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+header nav li {
+	display: inline-block;
+	padding: 0 0 0 30px;
+}
+header nav a {
+	text-decoration: none;
+	color: inherit;
+}
+.column {
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+}
+.subcontainer .column {
+	width: 50%;
+}
+#column_left {
+	width: 65%;
+	padding: 0 30px 0 0;
+}
+#column_right {
+	width: 35%;
+}
+/* Team Display */
+.person {
+	text-align: center;
+	width: 50%;
+	float: left;
+	padding: 0 5px;
+	box-sizing: border-box;
+}
+.person img {
+	width: 100%;
+	border-radius: 50%;
+}
+.person span {
+	display: inline-block;
+}
+.person .slack,
+.person .name {
+	position: relative;
+	border-radius: 20px;
+	padding: 5px;
+}
+.person .slack {
+	bottom: 20px;
+	padding-left: 20px;
+	background-color: rgba(200,200,50,0.8);
+}
+.person .slack:before{
+	content: '@';
+	position: absolute;
+	left: 5px;
+	font-weight: bold;
+}
+.person .name {
+	top: 20px;
+	background-color: rgba(50,200,200,0.8);
+}
+
