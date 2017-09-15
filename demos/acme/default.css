@@ -14,16 +14,35 @@ nav {
 nav ul {
 	list-style-type: none;
 }
-nav li {
+nav > li {
 	display: inline-block;
+	position: relative;
 	padding-left: 20px;
 }
-nav li a {
+nav > li a {
 	color: grey;
 	text-transform: uppercase;
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 1.5em;
+}
+nav ul {
+	padding: 0;
+}
+.submenu {
+	position: absolute;
+	left: 20px;
+	top: 12px;
+	opacity: 0;
+	z-index: 1;
+	background-color: rgba(255,255,255,0);
+	transition: opacity, background-color 1s;
+	/*display: none;*/
+}
+nav > li:hover .submenu {
+	background-color: blue;
+	display: block;
+	opacity: 1;
 }
 #main {
 	text-align: center;
@@ -38,6 +57,7 @@ nav li a {
 h2 {
 	font-weight: normal;
 }
+
 @media (max-width: 775px) {
 	nav {
 		position: static;
