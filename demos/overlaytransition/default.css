@@ -1,0 +1,70 @@
+main {
+	position: relative;
+	width: 400px;
+	height: 400px;
+}
+.box {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.boxanimate {
+	animation-duration: 1s;
+	/*animation-name: fadeout;*/
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+}
+#box1 {
+	background-color: red;
+	animation-name: fadeout1;
+}
+#box2 {
+	z-index: -1;
+	animation-name: fadeout2;
+	background-color: green;
+	/*animation-delay: 1s;*/
+}
+#box3 {
+	z-index: -2;
+	background-color: blue;
+	/*animation-delay: 2s;*/
+}
+@keyframes fadeout1 {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes fadeout2 {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.thing {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	background-color: rgb(200,20,20);
+	transition: all 1s;
+	opacity: 1;
+}
+.thing.inactive {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+

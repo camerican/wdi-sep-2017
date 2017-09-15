@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Transition Attempt</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+</head>
+<body>
+	<h1>Transition Attempt</h1>
+	<main>
+		<div id="box1" class="box boxanimate"></div>
+		<div id="box2" class="box boxanimate"></div>
+		<div id="box3" class="box"></div>
+	</main>
+
+	<div id="container">
+		<div class="thing"></div>
+		<div class="thing"></div>
+		<div class="thing"></div>
+		<div class="thing"></div>
+		<div class="thing"></div>
+		<div class="thing"></div>
+		<div class="thing"></div>
+	</div>
+	<script>
+		document.querySelector("#container").addEventListener("click",function(event){
+			event.target.classList.add("inactive");
+			setTimeout(function(){
+				event.target.style.display = "none";
+			},1000);
+		});
+	</script>
+</body>
+</html>
