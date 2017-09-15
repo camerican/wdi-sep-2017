@@ -7,6 +7,29 @@
 </head>
 <body class="overlay active">
 	<div id="modal">
+		<form>
+			<table>
+				<tr>
+					<td><label for="name">Name</label></td>
+					<td><input type="text" name="name" /></td>
+				</tr>
+				<tr>
+					<td><label for="color">Favorite Color</label></td>
+					<td><select name="color">
+						<option value="blue">Blue Rules</option>
+						<option value="red">Red Forever</option>
+						<option value="green">Money Green</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td><label for="message">Note</label></td>
+					<td><textarea rows="10" name="message"></textarea></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" value="Send" /></td>
+				</tr>
+			</table>
+		</form>
 	</div>
 	<header>
 		<div id="logo">WDI Corp</div>
@@ -131,5 +154,6 @@
 			</div>
 		</div>
 	</main>
+	<script src="js/main.js"></script>
 </body>
 </html>
