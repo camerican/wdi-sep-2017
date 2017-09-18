@@ -37,13 +37,20 @@ function Bird( name, species, order, family, image ) {
   this.order = order;
   this.family = family;
   this.image = image;
-  this.htmlOut = function() {
-    return `<div class="bird">
-      <span class="name">${this.name}</span>
-      <img src="${this.image}" />
-    </div>`;
-  }
+  // this.htmlOut = function() {
+  //   return `<div class="bird">
+  //     <span class="name">${this.name}</span>
+  //     <img src="${this.image}" />
+  //   </div>`;
+  // }
 }
+Bird.prototype.htmlOut = function() {
+  return `<div class="bird">
+    <span class="name">${this.name}</span>
+    <img src="${this.image}" />
+  </div>`;
+}
+
 
 let warbler = new Bird(
   "Cape May Warbler",
