@@ -37,6 +37,12 @@ function Bird( name, species, order, family, image ) {
   this.order = order;
   this.family = family;
   this.image = image;
+  this.htmlOut = function() {
+    return `<div class="bird">
+      <span class="name">${this.name}</span>
+      <img src="${this.image}" />
+    </div>`;
+  }
 }
 
 let warbler = new Bird(
@@ -72,8 +78,12 @@ const birds2 = [
   )
 ];
 
+// we could use a for loop
+for( let i=0; i < birds2.length; i++ ) {
+  document.querySelector("main").innerHTML += birds2[i].htmlOut();
+}
 
-// 
+// or a forEach call on the array of birds
 
 
 

@@ -18,33 +18,50 @@ function Lesson( name, type ) {
 
 const lessons = [
   new Lesson( "Object Oriented JavaScript" ),
-  new Lesson( "Object Oriented JavaScript Problems", "workshop")
+
+  new Lesson( "Object Oriented JavaScript Problems",
+ "workshop")
 ];
+
+
 // and then maybe each lesson has an expected duration
-// with lectures taking 1hr, and workshops taking 3hr
+// with lectures taking 1hr,
+//   and workshops taking 3hr
 
 
 // { 
 //   monday: [
 //     {type: "lecture",
+
 //      name: "Object Oriented JavaScript"},
+
 //     {type: "workshop",
+
 //      name: "Object Oriented JavaScript Problems"}
 //   ],
+
 //   tuesday: [
 //     {type: "workshop",
+
 //      name: "Object Oriented JavaScript Problems"}
 //   ],
+
 //   wednesday: [
 //     {type: "workshop",
+
 //      name: "Jukebox Starter Kit"
 //     }
 //   ],
+
 //   thursday: null,
+
 //   friday: [
 //     {type: "lecture",
+
 //      name: "jQuery Basics"},
+
 //     {type: "lecture",
+
 //      name: "APIs"}
 //   ]
 // }
