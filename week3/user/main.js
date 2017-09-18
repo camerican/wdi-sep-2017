@@ -15,7 +15,7 @@ User.prototype = {
 // Admin Constructor inherit from User Constructor
 function Admin( ) {
   let args = Array.from(arguments);
-  this.admin = args.slice(-1);
+  this.admin = args.slice(-1)[0];
   User.apply(this,args.slice(0,-1));
 }
 Admin.prototype = Object.create(User.prototype);
