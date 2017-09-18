@@ -28,3 +28,25 @@ const companies = [
   { image: "//d24wuq6o951i2g.cloudfront.net/img/events/id/279/2796022/assets/1fb.brandwatch-logo1.jpg", company: "Brandwatch" },
   { image: "//d24wuq6o951i2g.cloudfront.net/img/events/id/279/2796022/assets/976.healtify-logo.png", company: "Healthify" }
 ];
+
+// let's create a Company constructor
+// that takes a name and an image
+
+// and lets add a "generateHTML" method
+// that outputs a template string
+// representing a div that has an 
+// image and name within it
+
+// Then let's map the array of simple company objects above into an array of Company objects created with the constructor
+
+// And then let's loop over each company
+// and generate the HTML output for it
+// by calling the generateHTML method
+// and appending it to #companies
+
+
+
+
+
+
+
