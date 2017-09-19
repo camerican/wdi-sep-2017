@@ -9,15 +9,45 @@ make sure that what you've written works well and you're able to
 store the necessary data in each object.
 */
 
-// to do: create Person constructor accepting firstName and lastName arguments
+// create Person constructor accepting firstName and lastName arguments
+function Person( firstName, lastName ) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+}
+Person.prototype.fullName = function() {
+  return `${this.firstName} ${this.lastName}`;
+//  return this.firstName + " " + this.lastName;
+}
+// create a Teacher constructor accepting an email address argument
+function Teacher( firstName, lastName, email ) {
+  this.email = email;
+  Person.call(this, firstName, lastName);
+}
+// have the Teacher prototype chain to the Person prototype using Object.create()
+Teacher.prototype = Object.create(Person.prototype);
+// Teacher -> Person -> Object -> null
 
-// to do: create a Teacher constructor accepting an email address argument
-  // to do: have the Teacher prototype chain to the Person prototype using Object.create()
+// create a Student constructor accepting a cohort argument
+function Student( /* firstName, lastName, cohort */ ) {
+  // last argument to cohort
+  this.cohort = arguments[arguments.length-1]; 
+  Person.apply(this, Array.from(arguments).slice(0,2));
+}
+// have the Student prototype chain to the Person prototype using Object.create()
+Student.prototype = Object.create(Person.prototype);
 
-// to do: create a Student constructor accepting a cohort argument
-  // to do: have the Student prototype chain to the Person prototype using Object.create()
+// create a School constructor that initializes a people array which we'll store both students and teachers in
+function School( ) {
+  this.people = [];
+}
+// add an addPerson method that accepts a student/teacher/person and adds them to the people array
+School.prototype.addPerson = function( person ) {
+  this.people.push( person );
+  return this; // enables method chaining
+}
 
-// to do: create a School constructor that initializes a people array which we'll store both students and teachers in
-// to do: add an addPerson method that accepts a student/teacher/person and adds them to the people array
+const nycda = new School();
+nycda.addPerson( new Teacher("Cam","Crews","cam@nycda.com")).addPerson( new Student("Jack","Floyd","WDI 2017"));
+
 
 
