@@ -1,4 +1,13 @@
 
+// 1) Listen for form submission
+//$().submit
+// document.querySelector().addEventListener("submit")
+
+// Don't forget to prevent the default for the form submission
+
+// in the submit handler callback, we want to grab the value of input[name=term] and use that in place of the string "Prince", then run the Ajax request....
+
+
 $.ajax({
   url: "https://itunes.apple.com/search",
   type: "GET",
