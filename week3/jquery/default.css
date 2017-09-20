@@ -1,0 +1,51 @@
+.ball {
+	box-sizing: border-box;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 2px solid black;
+	position: fixed;
+}
+#ball1 {
+	background-color: red;
+	top: 0;
+	left: 0;
+}
+#ball2 {
+	right:0;
+	bottom:0;
+	background-image: radial-gradient(circle at center, red 0, white, red, white, red, white, red, white 100%);
+}
+/* iTunes Layout */
+.track {
+	width: 200px;
+	height: 200px;
+	background-size: cover;
+	position: relative;
+	display: inline-block;
+}
+.track .name,
+.track .price {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: 5px;
+	text-align: center;
+	color: #fff;
+}
+.track .name {
+	top: 0;
+	background-color: rgba(200,50,50,0.5);
+}
+.track .price {
+	bottom: 0;
+	background-color: rgba(50,200,50,0.5);
+}
+
+
+
+
+
+
+
+
