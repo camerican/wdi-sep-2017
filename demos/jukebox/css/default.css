@@ -1,0 +1,20 @@
+.jukebox {
+	width: 300px;
+	text-align: center;
+}
+.jukebox .controls {
+	font-size: 3em;
+	color: #555;
+}
+.jukebox .currentSong {
+	border: 2px solid rgb(33,33,33);
+	border-radius: 2em;
+	height: 40px;
+}
+.jukebox .controls .fa {
+	transition: color 0.5s;
+	cursor: pointer;
+}
+.jukebox .controls .fa:hover {
+	color: #F55;
+}
