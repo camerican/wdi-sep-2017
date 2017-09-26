@@ -1,3 +1,30 @@
+SC.initialize({
+  client_id: 'fd4e76fc67798bfa742089ed619084a6'
+});
+// to do: investigate why resolve is not returning successfully
+SC.resolve("https://soundcloud.com/thebirthdaymassacre/happy-birthday").then(function(data){
+  document.body.innerHTML += `<img src="${data.artwork_url}" />${data.title}`;
+  console.log(data);
+});
+SC.get("/tracks/53579959").then(function(data){
+  console.log(data);
+});
+
+// SC.get("/tracks",{
+//   q: document.getElementById("song").value
+// }).then(function(data){
+//   console.log(data);
+// });
+
+
+let player;
+
+SC.stream('/tracks/53579959').then(function(response){
+  player = response;
+  player.play();
+});
+  
+
 // to do: implement OO Jukebox
 const songs = [
   {name: "Corruption", file: "corruption.mp3"},
@@ -17,6 +44,7 @@ let currentSong = 0
   , elForward
   ;
 document.addEventListener("DOMContentLoaded",function(){
+  // set the element variables declared above
   elJukebox = document.querySelector("#myJukebox");
   elPlayer = elJukebox.querySelector("audio");
   elCurrentSong = elJukebox.querySelector(".currentSong");
@@ -29,9 +57,11 @@ document.addEventListener("DOMContentLoaded",function(){
   //        on the .controls which will then do
   //        an if/else check on the event.target
   //        to determine which button was clicked
+  // Listen for a click on play button
   elPlay.addEventListener("click",function(){
     elPlayer.play();
   });
+  // Listen for a click on forward button
   elForward.addEventListener("click",function(){
     // move currentSong forward one -- and use the remainder
     // operator (modulus) so that we reset back to 0 if we've
@@ -44,4 +74,8 @@ document.addEventListener("DOMContentLoaded",function(){
     // then play again
     elPlayer.play();
   });
+  // to do: listen for a click on back button
+          // similar to forward, but subtract one from currentSong
+  // to do: listen for a click on pause button
+          // call stop method on player
 });

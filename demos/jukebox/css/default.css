@@ -10,6 +10,8 @@
 	border: 2px solid rgb(33,33,33);
 	border-radius: 2em;
 	height: 40px;
+	font-size: 32px;
+	line-height: 40px;
 }
 .jukebox .controls .fa {
 	transition: color 0.5s;
