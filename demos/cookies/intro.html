@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Intro</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+</head>
+<body>
+	<h1>Welcome to our site</h1>
+	<div class="something"></div>
+	<script src="cookies.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded",function(){
+			if( !Cookies.get("visited") ) {
+				Cookies.set("visited",true);
+				setTimeout(function(){
+					document.querySelector(".something").classList.add("active");
+				},10);
+				
+			}
+		});
+	</script>
+</body>
+</html>
