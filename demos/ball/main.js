@@ -1,6 +1,15 @@
 // wait for the DOM to load
 let elBall;
 document.addEventListener("DOMContentLoaded",function(){
+  // hide ball when we click the h1
+  document.querySelector("h1").addEventListener("click",function(){
+    //hide ball
+    // elBall.style.display = "none";
+    // elBall.style.fontSize = "30px";
+    elBall.className = "hidden";
+  });
+
+  // ball movement code
   let lastTime;
   elBall = document.getElementById("ball");
   elBall.style.top = "50%";

@@ -31,6 +31,37 @@ const companies = [
 
 // let's create a Company constructor
 // that takes a name and an image
+function Company( name, image ) {
+  this.name = name;
+  this.image = image;
+}
+Company.prototype = {
+  generateHTML: function() {
+    return `<div class="company">
+    <img src="${this.image}" />
+    <span class="name">${this.name}</span>
+  </div>`;
+  },
+  someOtherFunction: function() {
+    return "Blah";
+  }
+};
+
+let united = new Company( "United Technologies", "http://d24wuq6o951i2g.cloudfront.net/img/events/id/279/2796022/assets/e3b.United_Technologies.svg.png");
+let ibm = new Company( "IBM", "http://d24wuq6o951i2g.cloudfront.net/img/events/id/279/2796022/assets/ca9.ibm-log.jpg");
+
+// { image: "//d24wuq6o951i2g.cloudfront.net/img/events/id/279/2796022/assets/e3b.United_Technologies.svg.png", company: "United Technologies" },
+//   { image: "//d24wuq6o951i2g.cloudfront.net/img/events/id/279/2796022/assets/ca9.ibm-log.jpg", company: "IBM" },
+
+// Company.prototype.generateHTML = function() {
+//   return `<div class="company">
+//     <img src="${this.image}" />
+//     <span class="name">${this.name}</span>
+//   </div>`;
+// };
+// Company.prototype.someOtherFunction = function(){
+//   return "Blah";
+// }
 
 // and lets add a "generateHTML" method
 // that outputs a template string

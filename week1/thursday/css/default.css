@@ -87,6 +87,7 @@ footer {
 	position: absolute;
 	left: 40px;
 	top: 0px;
+	transition: opacity 1s;
 }
 .ball em {
 	position: absolute;
@@ -99,3 +100,20 @@ footer {
 .zebra li:nth-child(2n) {
 	background-color: lightblue;
 }
+@media (max-width: 900px) {
+	#col1, #col2 {
+		position: static;
+		display: block;
+	}
+	.ball {
+		opacity: 0;
+	}
+}
+@media (max-width: 600px) {
+	body {
+		background-color: purple;
+	}
+}
+
+
+

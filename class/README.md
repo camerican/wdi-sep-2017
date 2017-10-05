@@ -17,3 +17,17 @@ _This is underline_
 | --- | --- |
 | Mood | Happy |
 | Color | Blue |
+
+
+## Request List
+
+### Friday 9/8
+
+* Terminal
+* Sublime Launch Shortcut
+* :hover selector & CSS Transitions
+* gallery
+
+### Thursday 9/7
+
+*

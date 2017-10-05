@@ -10,3 +10,6 @@
 	background-color: red;
 	transition: top, left 1s;
 }
+#ball.hidden {
+	display:none;
+}
