@@ -76,5 +76,28 @@ my_hash = {
 }
 ```
 
+## Conditionals
+
+We can evaluate whether something is `true` or `false` by using conditionals.  These are useful for deciding to do something with an `if`, `else`, `elsif` statement, followed by a block.
+
+```Ruby
+puts "Please enter your age"
+age = gets.strip.to_i
+if age > 25
+	puts "You get fair rates on your rental car"
+elsif age > 21
+	puts "Congratulations, you can drink (but please only in moderation)"
+elsif age > 18
+	puts "Congratulations, you can smoke (but please don't!)"
+else
+	puts "Sorry, you aren't allowed to do much yet"
+end
+```
+
+We can use the usual suspects as conditional statements:
+
+`==` to evaluate whether two things have equal values
+Along with our friends `>, >=, <, <=, !=`.   
+
 
 
