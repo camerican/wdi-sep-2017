@@ -10,6 +10,7 @@ var myDino = new Dinosaur("Triceratops");
 
 // User
 function User(first, last){
+  User.population = (User.population || 0) + 1;
   this.first = first;
   this.last = last;
 }
