@@ -143,6 +143,53 @@ end
 
 
 
+####  Fizz Buzz
+
+## print out a list of numbers from 1-100
+
+## if multiple of 3 say fizz
+## if multiple of 5 say buzz
+## if both, say fizzbuzz
+## otherwise, say the number itself
+
+## 1
+## 2
+## Fizz
+## 4
+## Buzz
+## Fizz
+## ...
+## 14
+## FizzBuzz
+
+# def fizz_buzz
+#   for i in 1..100
+#     if i % 15 == 0
+#       puts "FizzBuzz"
+#     elsif i % 3 == 0
+#       puts "Fizz"
+#     elsif i % 5 == 0
+#       puts "Buzz"
+#     else
+#       puts i
+#     end
+#   end
+# end
+
+def fizz_buzz
+  for i in 1..100
+    result = ""
+    result << "Fizz" if i % 3 == 0
+    result << "Buzz" if i % 5 == 0
+    puts result.length > 0 ? result : i
+  end
+end
+
+
+
+
+
+
 
 
 
