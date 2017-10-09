@@ -1,6 +1,13 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    faraday (0.13.1)
+      multipart-post (>= 1.2, < 3)
+    geolocater (0.1.0)
+      faraday
+      json
+    json (2.1.0)
+    multipart-post (2.0.0)
     mustermann (1.0.1)
     rack (2.0.3)
     rack-protection (2.0.0)
@@ -16,6 +23,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  geolocater
   sinatra
 
 BUNDLED WITH
