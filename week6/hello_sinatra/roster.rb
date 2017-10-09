@@ -1,4 +1,4 @@
-@roster = [{
+$roster = [{
   first: 'Kevin',
   last: 'Gallagher',
   photo: 'https://ca.slack-edge.com/T03JJLPSP-U6W4SAPRT-835ed0912220-512',
@@ -59,7 +59,7 @@
   last: 'Braxton',
   photo: 'https://ca.slack-edge.com/T03JJLPSP-U6X55A4LX-8429ebc3bbf6-512',
   slack: 'vbraxtvi',
-  github: ''
+  github: 'digmyz'
 },
 {
   first: 'Daniel',
