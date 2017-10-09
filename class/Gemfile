@@ -1,0 +1,10 @@
+source 'http://rubygems.org'
+
+gem 'geolocater'
+gem 'rainbow'
+
+
+# Once you have a Gemfile set-up
+# you can run:
+#
+#   bundle install
