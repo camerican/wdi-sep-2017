@@ -14,7 +14,16 @@ def initialize
       %w(Don Mahima),
       %w(Elise Valerie),
       %w(Jack Veronica),
-      %w(John Michael)
+      %w(John Michael),
+      %w(Boony, Mahima),
+      %w(Veronica, John),
+      %w(Christy, Michael),
+      %w(Kevin, Valerie),
+      %w(Sherill, Joan),
+      %w(Don, Sophie),
+      %w(Daniel, Mikey),
+      %w(Vikki, Jack),
+      %w(Elise, Lisa)
     ]
   end
   def make_groups size=2
