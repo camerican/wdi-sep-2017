@@ -1,4 +1,5 @@
 require 'geolocater'
+require 'rainbow'
 
 puts "Please enter a web address to search for"
 
@@ -6,12 +7,16 @@ web_address = gets.strip
 
 result = `ping -c 1 #{web_address}`
 
-p result
+# p result
 
 ip_address = /\(([^\)]+)\)/.match(result)[1]
 
-p ip_address
+# p ip_address
 
-# ip_address = Geolocater.ip_lookup(web_address)
+result = Geolocater.geolocate_ip(ip_address)
 
-p Geolocater.geolocate_ip(ip_address)
+# city
+# region_code
+
+puts "The Website " + Rainbow(web_address).orange + " is located in " + Rainbow(result["city"]).red + ", " + Rainbow(result["region_code"]).green
+ 
