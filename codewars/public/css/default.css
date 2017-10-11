@@ -1,3 +1,23 @@
 body {
 	background-color: orange;
 }
+body.home {
+	background-color: red;
+}
+body.home h1 {
+	font-size: 60px;
+}
+
+body.help label {
+	display: inline-block;
+	padding: 10px;
+	vertical-align: top;
+	text-align: right;
+	width: 100px;
+}
+body.help input,
+body.help textarea {
+	font-size: 24px;
+	padding: 10px;
+	margin: 0 0 10px 0;
+}
