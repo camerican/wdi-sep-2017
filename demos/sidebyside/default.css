@@ -1,0 +1,14 @@
+nav {
+	width:80%;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+nav * {
+	box-sizing: border-box;
+}
+nav > div {
+	float: left;
+	width: 25%;
+	border: 1px solid black;
+	height: 150px;
+}
