@@ -94,7 +94,7 @@ $roster = [{
   last: 'Samuel',
   photo: 'https://ca.slack-edge.com/T03JJLPSP-U6XRR4EM7-bd0547d3f086-512',
   slack: 'sherill',
-  github: ''
+  github: 'Shesam1'
 },
 {
   first: 'Sophie',
