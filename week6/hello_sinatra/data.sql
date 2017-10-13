@@ -1,5 +1,5 @@
 --user records
-INSERT INTO user (`id`,`first`,`last`,`photo`,`slack`,`github`) VALUES 
+INSERT INTO user (`id`,`last`,`first`,`photo`,`slack`,`github`) VALUES 
 ('1','Pegher','Lisa','lisamae','Kgallagher281','https://ca.slack-edge.com/T03JJLPSP-U6WT2E4JJ-8f5202eea9c9-512'),
 ('2','Tuladhar','Mahima','mahima','lisa1357mae','https://ca.slack-edge.com/T03JJLPSP-U6XC01KA8-394be3c3ce97-512'),
 ('3','Gallagher','Kevin','kgallagher','Kgallagher281','https://ca.slack-edge.com/T03JJLPSP-U6ZECGEUF-0bcc31931324-512'),
