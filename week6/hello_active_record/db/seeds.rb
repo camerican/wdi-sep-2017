@@ -22,7 +22,20 @@ User.create([
 ])
 
 # Payment records
-
+Payment.create([
+  {id: 1, payer_id: 1, payee_id: 2, amount: 1000, created_at: "20171012-14:14:00"},
+{id: 2, payer_id: 11, payee_id: 13, amount: 420, created_at: "20171012-14:14:01"},
+{id: 3, payer_id: 1, payee_id: 14, amount: 599.99, created_at: "20171012-14:14:02"},
+{id: 4, payer_id: 2, payee_id: 14, amount: 599.99, created_at: "20171012-14:14:03"},
+{id: 5, payer_id: 3, payee_id: 14, amount: 599.99, created_at: "20171012-14:14:04"},
+{id: 6, payer_id: 4, payee_id: 14, amount: 599.99, created_at: "20171012-14:14:05"},
+{id: 7, payer_id: 5, payee_id: 14, amount: 599.99, created_at: "20171012-14:14:06"},
+{id: 8, payer_id: 6, payee_id: 14, amount: 599.99, created_at: "20171012-14:14:07"},
+{id: 9, payer_id: 7, payee_id: 14, amount: 599.99, created_at: "20171012-14:14:08"},
+{id: 10, payer_id: 8, payee_id: 14, amount: 599.99, created_at: "20171012-14:14:09"},
+{id: 11, payer_id: 9, payee_id: 14, amount: 599.99, created_at: "20171012-14:14:10"},
+{id: 12, payer_id: 10, payee_id: 14, amount: 599.99, created_at: "20171012-14:14:11"}
+])
 
 # Group records
 
