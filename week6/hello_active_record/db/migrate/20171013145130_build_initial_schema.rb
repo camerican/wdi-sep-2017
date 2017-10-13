@@ -9,8 +9,8 @@ class BuildInitialSchema < ActiveRecord::Migration[5.1]
     end
 
     create_table :payments do |t|
-      t.references :payer_id, foreign_key: {to_table: :users}, index: true
-      t.references :payee_id, foreign_key: {to_table: :users}, index: true
+      t.references :payer, foreign_key: {to_table: :users}, index: true
+      t.references :payee, foreign_key: {to_table: :users}, index: true
       t.decimal :amount, precision: 10, scale: 2
       t.datetime :created_at
     end

@@ -6,6 +6,15 @@ class User < ActiveRecord::Base
   def kevin
     self.full_name + " (" + self.github + ")"
   end
+  def self.generate_options
+    result = ""
+    self.all.each do |person|
+      result << <<-HEREDOC
+      <option value="#{person.id}">#{person.full_name}</option>
+      HEREDOC
+    end
+    result
+  end
 end
 class Payment < ActiveRecord::Base
 end

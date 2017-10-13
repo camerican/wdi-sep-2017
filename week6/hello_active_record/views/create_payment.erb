@@ -1,0 +1,15 @@
+	<h3>Create a Payment</h3>
+<form class="nycda_form" method="post">
+	<label>Payer</label><select name="payer">
+		<option value="">Select Payer</option>
+		<% @roster.each do |person| %>
+		<option value="<%=person.id %>"><%= person.full_name %></option>
+		<% end %>
+	</select>
+	<label>Payee</label><select name="payee">
+		<option value="">Select Payee</option>
+		<%= User.generate_options %>
+	</select>
+	<label>Amount (USD)</label><input type="number" name="amount" placeholder="0.00"/>
+	<input type="submit" />
+</form>

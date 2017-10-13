@@ -13,12 +13,12 @@
 ActiveRecord::Schema.define(version: 20171013145130) do
 
   create_table "payments", force: :cascade do |t|
-    t.integer "payer_id_id"
-    t.integer "payee_id_id"
+    t.integer "payer_id"
+    t.integer "payee_id"
     t.decimal "amount", precision: 10, scale: 2
     t.datetime "created_at"
-    t.index ["payee_id_id"], name: "index_payments_on_payee_id_id"
-    t.index ["payer_id_id"], name: "index_payments_on_payer_id_id"
+    t.index ["payee_id"], name: "index_payments_on_payee_id"
+    t.index ["payer_id"], name: "index_payments_on_payer_id"
   end
 
   create_table "users", force: :cascade do |t|

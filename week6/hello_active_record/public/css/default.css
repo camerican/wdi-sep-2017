@@ -1,0 +1,13 @@
+.nycda_form {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-gap: 10px;
+	width: 400px;
+}
+.nycda_form > label {
+	text-align: right;
+	font-weight: bold;
+}
+.nycda_form > input[type=submit] {
+	grid-column: 1 / 2 span;
+}

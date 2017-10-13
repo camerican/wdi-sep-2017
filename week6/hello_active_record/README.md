@@ -59,6 +59,16 @@ Let's touch out a models.rb file: `touch models.rb`.  Just in our project root d
 
 
 
+## Creating another migration
+
+We ran:
+
+```
+ rake db:create_migration NAME=create_groups_table
+```
+
+to build another migration
+
 
 ---
 
