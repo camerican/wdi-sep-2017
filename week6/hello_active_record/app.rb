@@ -14,13 +14,15 @@ get '/' do
 end
 
 get '/roster' do
-  p $roster
+  @roster = User.all
   erb :roster
 end
 
-get '/profile/:id' do
-  p params[:id]
-  @person = $roster.find{|x| x[:slack] == params[:id]}
+get '/profile/:slack' do
+  p params[:slack]
+  @person = User.find_by(slack: params[:slack])
+  pass unless @person # try to pass onward if we don't have the person
+
   erb :profile
 end
 

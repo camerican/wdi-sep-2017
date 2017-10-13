@@ -1,6 +1,6 @@
 	<h1>Our Roster</h1>
 	<ul>
-	<% $roster.each do |person| %>
-	<li><a href="/profile/<%= person[:slack] %>"><%= person[:first] %> <%= person[:last] %></a></li>
+	<% @roster.each do |person| %>
+	<li><a href="/profile/<%= person.slack %>"><%= person.kevin %></a></li>
 	<% end %>
 	</ul>

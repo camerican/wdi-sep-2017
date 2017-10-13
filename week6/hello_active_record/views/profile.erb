@@ -1,3 +1,3 @@
-	<h1><%= @person[:first] %> <%= @person[:last] %></h1>
-	<img src="<%= @person[:photo] %>" /> 
-	<a href="http://github.com/<%= @person[:github] %>"><i class="fa fa-github"></i></a>
+	<h1><%= @person.full_name %></h1>
+	<img src="<%= @person.photo %>" /> 
+	<a href="http://github.com/<%= @person.github %>"><i class="fa fa-github"></i></a>

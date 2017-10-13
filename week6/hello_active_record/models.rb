@@ -1,8 +1,10 @@
 
 class User < ActiveRecord::Base
-  # to do: add in a user method...
+  def full_name
+    self.first + " " + self.last
+  end
   def kevin
-    self.first + " " + self.last + " (" + self.github + ")"
+    self.full_name + " (" + self.github + ")"
   end
 end
 class Payment < ActiveRecord::Base
