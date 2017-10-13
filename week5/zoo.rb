@@ -47,3 +47,14 @@ zoo.exhibits
 zoo.exhibits.push barbar, simba
 
 
+
+
+def fibonacci(x)
+  return 1 if x < 2
+  return fibonacci(x-1) + fibonacci(x-2)
+end
+
+
+
+
+

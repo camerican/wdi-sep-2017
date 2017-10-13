@@ -6,7 +6,7 @@ puts "Please enter a web address to search for"
 web_address = gets.strip
 
 result = `ping -c 1 #{web_address}`
-
+ 
 # p result
 
 ip_address = /\(([^\)]+)\)/.match(result)[1]
