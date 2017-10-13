@@ -10,6 +10,12 @@ gem 'rake'
 
 We'll want to make sure we `require 'sinatra/activerecord'` in our `app.rb` file.
 
+We'll also want to configure our database:
+
+```
+set :database, {adapter: "sqlite3", database: "codewars.sqlite3"}
+```
+
 Then we'll `touch Rakefile` and add the rake library and our application to the Rakefile:
 
 ```
@@ -17,7 +23,11 @@ require 'sinatra/activerecord/rake'
 require './app'
 ```
 
+## Our first migration
 
+```
+rake db:create_migration NAME=build_initial_schema
+```
 
 ## Previously....
 
