@@ -1,0 +1,10 @@
+
+	<h2><%= @room.name %></h2>
+
+	<h4>Is inhabited by the following users</h4>
+
+	<ul>
+		<% @room.users.each do |user| %>
+		<li><%= user.first %> <%= user.last %></li>
+		<% end %>
+	</ul>
