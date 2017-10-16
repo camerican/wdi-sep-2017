@@ -1,0 +1,10 @@
+<% if @current_user %>
+	<a href="/logout">Logout</a>
+<% else %>
+<h3>Login</h3>
+<form class="hq" method="POST" action="/login">
+	<label>Slack Name</label><input name="slack" />
+	<label>Password</label><input name="password" type="password" />
+	<input type="submit" />
+</form>
+<% end %>
