@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/activerecord'
+require 'sinatra/flash'
 require 'sqlite3'
 require './models'
 
@@ -8,6 +9,11 @@ set :database, {adapter: 'sqlite3', database: 'hq.sqlite3'}
 
 before do
   current_user
+end
+
+# login protecting routes
+before ['/questions/new','/questions'] do
+  redirect '/' unless @current_user
 end
 
 get '/' do
@@ -43,10 +49,12 @@ post '/login' do
   if user && user.password == params[:password]
     # a-ok!  let them in, and log them in
     session[:user_id] = user.id
+    flash[:message] = "Welcome to the coolest site on the internet.  (almost)"
     redirect '/'
   else
     # uh oh, user and pass didn't match
-    redirect :back
+    flash[:message] = "Ooops, did you forget your account information?  I don't recognize that user/pass combo."
+    redirect back
   end
   # we'll check the password submitted
   # against the one we have in the DB
@@ -57,7 +65,8 @@ end
 
 get '/logout' do
   session[:user_id] = nil
-  redirect :root
+  flash[:message] = "You're logged out. Cool!"
+  redirect '/'
 end
 
 def current_user

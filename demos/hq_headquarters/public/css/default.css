@@ -7,3 +7,9 @@
 .hq input[type=submit] {
 	grid-column: 2;
 }
+#notice {
+	background-color: rgba(30,30,200,0.8);
+	color: #fff;
+	font-weight: bold;
+	padding: 15px 50px;
+}

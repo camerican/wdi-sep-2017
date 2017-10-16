@@ -6,6 +6,10 @@
 	<link rel="stylesheet" href="/css/default.css" />
 </head>
 <body>
+	<% if flash[:message] %>
+	<div id="notice"><%= flash[:message] %></div>
+	<% end %>
+
 	<%= yield %>
 </body>
 </html>

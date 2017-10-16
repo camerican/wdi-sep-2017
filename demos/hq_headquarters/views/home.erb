@@ -2,7 +2,9 @@
 	
 	<%= erb :login %>
 
+	<% if @current_user %>
 	<a href="/questions/new">Add a New Question</a>
+	<% end %>
 	<% @questions.each do |question| %>
 		<div class="question">
 			<strong><%= question.body %></strong>
