@@ -15,5 +15,16 @@ get '/questions/new' do
 end
 
 post '/questions' do
-  "Congrats, you reached post questions!" + params.to_s
+               # ["body", "option1", "option2"]
+  accepted_keys = %w(body option1 option2 option3 correct_answer)
+  question = Question.new params.select{|k| accepted_keys.include? k}
+  # question = Question.new {
+  #   body: params[:body],
+  #   option1: params[:option1],
+  #   option2: params[:option2],
+  #   option3: params[:option3],
+  #   correct_answer: params[:correct_answer]
+  # }
+  question.save
+  redirect '/'
 end
