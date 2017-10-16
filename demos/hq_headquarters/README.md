@@ -147,3 +147,39 @@ We'll then touch our a seeds file: `touch db/seeds.rb`
 ### Loading our seed data
 
 `rake db:seed`
+
+
+### Define ActiveRecord Associations
+
+User has many guesses
+Guess belongs to a user
+
+Question has many guesses
+Guess bleongs to a question
+
++ a user Has many Questions (through Guesses)
++ a question has many users (through Guesses)
+
+
+```ruby
+class User < ActiveRecord::Base
+  has_many :guesses
+  has_many :questions, through: :guesses
+end
+class Question < ActiveRecord::Base
+  has_many :guesses
+  has_many :users, through: :guesses
+end
+class Guess < ActiveRecord::Base
+  belongs_to :user
+  belongs_to :question
+end
+```
+
+### Allowing the User to add a new Question
+
+We'll create for a form for adding questions.
+
+`touch views/new_question.erb`
+
+

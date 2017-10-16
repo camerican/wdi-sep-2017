@@ -1,0 +1,16 @@
+<form method="POST" action="/questions">
+	<label>Question</label><textarea name="body"></textarea>
+	<label>Option 1</label><input name="option1" />
+	<label>Option 2</label><input name="option2" />
+	<label>Option 3</label><input name="option3" />
+	<label>Answer</label><select name="correct_answer">
+		<option value="">Choose an Answer</option>
+		<% 3.times do |n| %>
+		<option value="<%= n+1 %>">Option <%= n+1 %></option>
+		<% end %>
+		<!-- <option value="1">Option 1</option>
+		<option value="2">Option 2</option>
+		<option value="3">Option 3></option> -->
+	</select>
+	<input type="submit" />
+</form>

@@ -1,11 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>HQ Trivia Headquarters</title>
-</head>
-<body>
 	<h1>This is our HQ Trivia Headquarters</h1>
 	
-</body>
-</html>
+	<% @questions.each do |question| %>
+		<div class="question">
+			<strong><%= question.body %></strong>
+			<ol>
+				<li><%= question.option1 %></li>
+				<li><%= question.option2 %></li>
+				<li><%= question.option3 %></li>
+			</ol>
+			<div class="players">
+				<ul>
+					<% question.users.each do |user| %>
+					<li><%= user.first %> <%= user.last %></li>
+					<% end %>
+				</ul>
+			</div>
+		</div>
+	<% end %>
