@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require 'sqlite3'
+require './models'
 
 set :database, {adapter: 'sqlite3', database: 'hq.sqlite3'}
 

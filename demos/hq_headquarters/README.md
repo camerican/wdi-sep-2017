@@ -76,13 +76,6 @@ first (string)
 last (string)
 slack (string)
 
-guesses
---
-id (int, PK)
-user_id (int, FK)
-question_id (int, FK)
-guess (int)
-
 questions
 --
 id (int, PK)
@@ -91,4 +84,66 @@ option1 (string)
 option2 (string)
 option3 (string)
 correct_answer (int)
+
+guesses
+--
+id (int, PK)
+user_id (int, FK)
+question_id (int, FK)
+guess (int)
 ```
+
+### Create migration
+
+We created our migration with the following:
+
+```ruby
+class InitialSchema < ActiveRecord::Migration[5.1]
+  def change
+    create_table :users do |t|
+      t.string :first
+      t.string :last
+      t.string :slack
+    end
+    create_table :questions do |t|
+      t.text :body
+      t.string :option1
+      t.string :option2
+      t.string :option3
+      t.integer :correct_answer
+    end
+    create_table :guesses do |t|
+      t.references :user, foreign_key: {to_table: :users}, index: true
+      t.references :question, foreign_key: {to_table: :questions}, index: true
+      t.integer :guess
+    end
+  end
+end
+```
+
+And then ran: `rake db:migrate`
+
+### Building our models
+
+We'll next want a models.rb file in our project root which we'll use to extend from activerecord and define the relations between tables.
+
+`touch models.rb`
+
+And then let's require it in our `app.rb`
+
+Let's have our models inherit from the ActiveRecord::Base:
+
+```ruby
+class User < ActiveRecord::Base
+end
+class Question < ActiveRecord::Base
+end
+class Guess < ActiveRecord::Base
+end
+```
+
+We'll then touch our a seeds file: `touch db/seeds.rb`
+
+### Loading our seed data
+
+`rake db:seed`
