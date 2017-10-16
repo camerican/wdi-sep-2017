@@ -54,3 +54,41 @@ get '/' do
   erb :home
 end
 ```
+
+### Create Migration
+
+We run the following command to run our first migration:
+
+```
+rake db:create_migration NAME=initial_schema
+```
+
+### Editing the migration
+
+We now want to build our schema for the three tables:
+
+
+```
+users
+--
+id (int, PK)
+first (string)
+last (string)
+slack (string)
+
+guesses
+--
+id (int, PK)
+user_id (int, FK)
+question_id (int, FK)
+guess (int)
+
+questions
+--
+id (int, PK)
+body (text)
+option1 (string)
+option2 (string)
+option3 (string)
+correct_answer (int)
+```
