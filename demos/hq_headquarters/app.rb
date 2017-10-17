@@ -32,6 +32,27 @@ get '/profile' do
   erb :profile
 end
 
+get '/signup' do
+  erb :signup
+end
+
+post '/signup' do
+  user = User.new(
+    first: params[:first],
+    last: params[:last],
+    slack: params[:slack],
+    password: params[:password],
+    photo: params[:photo]
+  )
+  if user.save
+    flash[:message] = "Cool, you registered successfully"
+    redirect '/'
+  else
+    flash[:message] = "Ooops, your account couldn't be created"
+    redirect back
+  end
+end
+
 post '/profile' do
   @current_user.photo = params[:photo]
   if @current_user.save
