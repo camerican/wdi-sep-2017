@@ -183,3 +183,37 @@ We'll create for a form for adding questions.
 `touch views/new_question.erb`
 
 
+
+### Adding Photo Upload
+
+## with CarrierWave
+
+#### Add carrierwave to Gemfile
+
+```
+gem 'carrierwave', '~> 1.0'
+```
+
+And then we `bundle` install.
+
+
+#### Add require to app.rb and configure
+
+```
+# app.rb
+require 'carrierwave'
+require 'carrierwave/orm/activerecord'
+
+#....
+
+#Configure Carrierwave
+CarrierWave.configure do |config|
+  config.root = File.dirname(__FILE__) + "/public"
+end
+```
+
+The configure part tells Carrierwave where to upload the photos to...
+
+
+
+
