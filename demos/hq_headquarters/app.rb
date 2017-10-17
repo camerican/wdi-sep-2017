@@ -1,11 +1,18 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/flash'
+require 'carrierwave'
+require 'carrierwave/orm/activerecord'
 require 'sqlite3'
 require './models'
 
 enable :sessions
 set :database, {adapter: 'sqlite3', database: 'hq.sqlite3'}
+#Configure Carrierwave
+CarrierWave.configure do |config|
+  config.root = File.dirname(__FILE__) + "/public"
+end
+
 
 before do
   current_user
@@ -19,6 +26,21 @@ end
 get '/' do
   @questions = Question.all
   erb :home
+end
+
+get '/profile' do
+  erb :profile
+end
+
+post '/profile' do
+  @current_user.photo = params[:photo]
+  if @current_user.save
+    flash[:message] = "Cool, nice photo!"
+  else
+    flash[:message] = "Sorry, your photo could not be saved at this time"
+  end
+  # to do: process profile data
+  redirect back
 end
 
 get '/questions/new' do

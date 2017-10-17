@@ -7,6 +7,9 @@
 .hq input[type=submit] {
 	grid-column: 2;
 }
+.hq label {
+	grid-column: 1;
+}
 #notice {
 	background-color: rgba(30,30,200,0.8);
 	color: #fff;

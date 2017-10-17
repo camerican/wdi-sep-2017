@@ -1,0 +1,8 @@
+	<h2>Add a profile photo</h2>
+	<% if @current_user.photo %>
+	<img src="<%= @current_user.photo.url %>" />
+	<% end %>
+<form method="POST" enctype="multipart/form-data">
+	<input type="file" name="photo" class="form-control" />
+  <input type="submit" />
+</form>
