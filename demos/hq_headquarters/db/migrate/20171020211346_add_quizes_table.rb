@@ -5,7 +5,7 @@ class AddQuizesTable < ActiveRecord::Migration[5.1]
       t.datetime :created_at
     end
 
-    create_table :quizes, &going_rogue_proc
+    create_table :quizzes, &going_rogue_proc
 
     change_table :questions do |t|
       t.references :quiz, foreign_key: {to_table: :quizes}, index: true

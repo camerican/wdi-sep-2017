@@ -1,4 +1,10 @@
 <form class="hq" method="POST" action="/questions">
+	<label>Quiz</label><select name="quiz_id">
+		<option value="">Select Quiz</option>
+		<% quizes.each do |quiz| %>
+		<option value="<%= quiz.id %>"><%= quiz.name %></option>
+		<% end %>
+	</select>
 	<label>Question</label><textarea name="body"></textarea>
 	<label>Option 1</label><input name="option1" />
 	<label>Option 2</label><input name="option2" />

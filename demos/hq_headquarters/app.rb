@@ -66,7 +66,8 @@ post '/profile' do
 end
 
 get '/questions/new' do
-  erb :new_question
+  #@quizes = Quiz.all
+  erb :new_question, locals: {quizes: Quiz.all}
 end
 
 post '/questions' do
