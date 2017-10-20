@@ -54,6 +54,7 @@ post '/signup' do
 end
 
 post '/profile' do
+  p params
   @current_user.photo = params[:photo]
   if @current_user.save
     flash[:message] = "Cool, nice photo!"

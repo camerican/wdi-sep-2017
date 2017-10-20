@@ -28,3 +28,7 @@ Question.create([
     correct_answer: 1
   }
 ])
+
+Guess.create([
+  {user_id: 1, question_id: 1, guess: 1}
+])
