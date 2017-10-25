@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @team.name %>
+</p>
+
+<%= render 'roster', players: @team.players %>
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>
