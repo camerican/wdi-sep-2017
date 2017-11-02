@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="UTF-8">
+      <title>Paired Programming</title>
+      <style>
+      body {
+            font-size: 30px;
+            text-align: center;
+            background-color: #3f3;
+            transition: background-color 720s;
+      }
+      body.stop {
+            background-color: #f33;
+      }
+      .person {
+            display: inline-block;
+            width: 200px;
+            margin: 10px 5px;
+      }
+      .person:nth-child(1){
+            text-align: right;
+      }
+      .person:nth-child(2){
+            text-align: left;
+      }
+      </style>
+      <script>
+const groups = [
+    ["Daniel", "Michael"],
+    ["Sophie", "Mahima"],
+    ["Joan", "Mikey"],
+    ["Elise", "John"],
+    ["Jack", "Don"],
+    ["Vikki", "Veronica"],
+    ["Lisa", "Boony"],
+    ["Sherill", "Valerie"],
+    ["Kevin", "Christy"]];
+let elGroups;
+document.addEventListener("DOMContentLoaded",function(){
+      elGroups = document.getElementById("groups");
+      groups.forEach(function(group){
+            elGroups.innerHTML += `<div class="group">
+                  <div class="person">${group.join('</div><div class="person">')}</div>
+            </div>`;
+      });
+      document.querySelector("h2").addEventListener("click",function(){
+            document.body.classList.add("stop");
+      });
+      setTimeout(function(){
+            alert("SWITCH!");
+      },720000)
+});
+      </script>
+</head>
+<body>
+      <h2>Paired Programming</h2>
+      <div id="groups"></div>
+</body>
+</html>

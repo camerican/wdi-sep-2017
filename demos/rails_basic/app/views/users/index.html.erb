@@ -1,3 +1,10 @@
+<%= link_to "Create User", :new_user %>
+
 <% @users.each do |user| %>
-	<p><%= link_to user.full_name, user %></p>
+	<p><%= link_to user.full_name, user %> 
+		<%= link_to "Terminate", user, method: :delete %></p>
 <% end %>
+
+<!-- <img src="/puppy.jpg" /> -->
+<!-- <img src="/assets/kennel/puppy.jpg" /> -->
+<%= image_tag 'kennel/puppy.jpg' %>

@@ -1,0 +1,64 @@
+@import 'bourbon/bourbon';
+
+$font-size: 18px;
+$primary-color: tint(#f33,60%);
+$secondary-color: tint(#33f,60%);
+
+@mixin black( $opacity ){
+	background-color: rgba(0,0,0,$opacity/100);
+}
+@mixin white( $opacity ){
+	background-color: rgba(255,255,255,$opacity/100);
+}
+
+
+@import 'nav';
+@import 'roster';
+
+// .test {
+// 	background-image: map-get($roster, vpkirby002);
+// }
+
+@each $key in $roster {
+	##{$key} {
+	}
+}
+
+%basic-box {
+	width: 100px;
+	height: 100px;
+}
+
+
+
+// SASS loop to generate h1-h6
+// from 72px to 12px
+
+@for $i from 0 through 5 {
+	h#{$i+1} {
+		font-size: 72px - $i * 12px;
+	}
+}
+
+// @for $i from 1 through 6 {
+// 	h#{$i} {
+// 		font-size: 84px - $i * 12px;
+// 	}
+// }
+
+
+// @for $i from 1 through 100 {
+// 	.box-#{$i} { width: 10px * $i}
+// }
+
+.test1 {
+	@extend %basic-box;
+	background-color: $primary-color;
+}
+.test2 {
+	@extend %basic-box;
+	background-color: $secondary-color;
+}
+body {
+	@include black(20);
+}
