@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_scope :user do
     get 'sign_out' => 'devise/sessions#destroy'
   end
+  get 'categories' => 'misc#categories'
+  get 'categories/:id' => 'misc#category_data', defaults: {format: :json}
   get 'posts/:id/like' => 'posts#like', as: :like_post
   root 'misc#index'
   resources :comments

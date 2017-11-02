@@ -1,0 +1,21 @@
+
+	<label>Category</label>
+	<%= select_tag :category_id, options_for_select( @categories.pluck(:name, :id)) %>
+	<div id="results">
+	</div>
+
+	<script>
+		document.querySelector("#category_id").addEventListener("change",function(event){
+			let elResults = document.querySelector("#results");
+			console.log(event);
+			axios.get(`categories/${event.target.value}`).then(function(response) {
+				elResults.innerText = "";
+				console.log(response);
+				response.data.forEach(function(post){
+					elResults.innerHTML += `<div class="post"> 
+					<a href="/posts/${post.id}">${post.title}</a>
+					</div>`;
+				});
+			});
+		});
+	</script>
