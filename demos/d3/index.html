@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>D3 Examples</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.min.js"></script>
+	<script src="js/d3pie.min.js"></script>
+</head>
+<body>
+	<div id="chart1"></div>
+	<script>
+const favLanguages = [
+	["JS",	6],
+	["Ruby",	5],
+	["neutral",	3]
+];
+
+new d3pie("chart1", {
+		header: {
+			title: {
+				text: "Favorite Language"
+			}
+		},
+		data: {
+			content: favLanguages.map( c => ({label: c[0], value: c[1]}))
+		}
+	});
+
+	</script>
+	<div id="chart2"></div>
+	<script>
+
+
+const nicknames = [	
+	["Cam's Crew",	6],
+	["Anything But Cam's Crew",	1],
+	["Something Happy",	1],
+	["Trivia",	3],
+	["undefined",	1],
+	["Eagles",	1],
+	["HCuties",	1]
+];
+
+// convert nicknames into desired format:
+// http://d3pie.org/website/examples/callbacks_click.html
+new d3pie("chart2", {
+		header: {
+			title: {
+				text: "Suggested Class Nicknames"
+			}
+		},
+		data: {
+			content: nicknames.map( c => ({label: c[0], value: c[1]}))
+		},
+		callbacks: {
+			onClickSegment: function(a) {
+				console.log(a);
+			}
+		}
+	});
+	</script>
+</body>
+</html>
