@@ -1,0 +1,25 @@
+	<h2>Assign Students to Course</h2>
+	<table>
+		<tbody>
+			<tr>
+				<th>Student</th>
+				<th>Course</th>
+				<th>Assign</th>
+			</tr>
+	<% @students.each do |user| %>
+
+			<tr id="user_row_<%= user.id %>">
+				<%= form_tag student_assign_course_path, method: :post, remote: true do %>
+				<%= hidden_field_tag :user_id, user.id %>
+				<td><%= user.fname %></td>
+				<td class="course"><%= user.print_courses %></td>
+				<td><%= collection_select nil, :course_id, @courses, :id, :name, {prompt: true}, {onchange: "Rails.fire(document.querySelector('#user_row_#{user.id} form'), 'submit');"} %></td>
+			<% end %>
+	<% end %>
+		</tbody>
+	</table>
+
+	<!-- <h2>Assign Instructor to Course</h2> -->
+	<% @courses.each do |course| %>
+
+	<% end %>
