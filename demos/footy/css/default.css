@@ -1,0 +1,10 @@
+main {
+	display: grid;
+	grid-template-columns: 2;
+}
+#league {
+	grid-column: 1;
+}
+#team {
+	grid-column: 2;
+}
