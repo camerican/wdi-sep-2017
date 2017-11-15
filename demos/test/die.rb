@@ -1,5 +1,5 @@
 class Die
   def self.roll
-    1
+    rand(6)+1
   end
 end
