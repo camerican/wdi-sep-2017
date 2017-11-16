@@ -3,6 +3,7 @@ require 'rainbow'
 require './roster'
 
 class Cohort
+  attr_reader :roster, :past_groups
   @@mode = :v2
   @@colors = %w(aqua aquamarine mediumaquamarine azure beige bisque blanchedalmond darkblue lightblue mediumblue aliceblue cadetblue dodgerblue midnightblue navyblue powderblue royalblue skyblue deepskyblue lightskyblue slateblue darkslateblue mediumslateblue steelblue lightsteelblue brown rosybrown saddlebrown sandybrown burlywood chartreuse chocolate coral lightcoral cornflower cornsilk crimson darkcyan lightcyan firebrick fuchsia gainsboro gold goldenrod darkgoldenrod lightgoldenrod palegoldenrod gray darkgray dimgray lightgray slategray lightslategray webgray darkgreen lightgreen palegreen darkolivegreen yellowgreen forestgreen lawngreen limegreen seagreen darkseagreen lightseagreen mediumseagreen springgreen mediumspringgreen webgreen honeydew indianred indigo ivory khaki darkkhaki lavender lavenderblush lemonchiffon lime linen darkmagenta maroon webmaroon mintcream mistyrose moccasin oldlace olive olivedrab orange darkorange orchid darkorchid mediumorchid papayawhip peachpuff peru pink deeppink lightpink hotpink plum purple mediumpurple rebeccapurple webpurple darkred orangered mediumvioletred palevioletred salmon darksalmon lightsalmon seashell sienna silver darkslategray snow tan teal thistle tomato turquoise darkturquoise mediumturquoise paleturquoise violet darkviolet blueviolet wheat antiquewhite floralwhite ghostwhite navajowhite whitesmoke lightyellow greenyellow)  
 def initialize
@@ -15,17 +16,54 @@ def initialize
       %w(Elise Valerie),
       %w(Jack Veronica),
       %w(John Michael),
-      %w(Boony, Mahima),
-      %w(Veronica, John),
-      %w(Christy, Michael),
-      %w(Kevin, Valerie),
-      %w(Sherill, Joan),
-      %w(Don, Sophie),
-      %w(Daniel, Mikey),
-      %w(Vikki, Jack),
-      %w(Elise, Lisa)
+      %w(Boony Mahima),
+      %w(Veronica John),
+      %w(Christy Michael),
+      %w(Kevin Valerie),
+      %w(Sherill Joan),
+      %w(Don Sophie),
+      %w(Daniel Mikey),
+      %w(Vikki Jack),
+      %w(Elise Lisa),
+      %w(Daniel Sherill),
+      %w(Michael Mahima),
+      %w(Jack Mikey),
+      %w(Joan Kevin),
+      %w(Don Elise),
+      %w(Lisa Veronica),
+      %w(John Sophie),
+      %w(Valerie Boony),
+      %w(Vikki Christy),
+      %w(Daniel Michael),
+      %w(Sophie Mahima),
+      %w(Joan Mikey),
+      %w(Elise John),
+      %w(Jack Don),
+      %w(Vikki Veronica),
+      %w(Lisa Boony),
+      %w(Sherill Valerie),
+      %w(Kevin Christy),
+      %w(Elise Veronica),
+      %w(Kevin Don),
+      %w(Vikki Sherill),
+      %w(Michael Sophie),
+      %w(Jack Boony),
+      %w(Valerie Daniel),
+      %w(Mikey John),
+      %w(Mahima Christy),
+      %w(Joan Lisa),
+      %w(Mahima Vikki Mikey),
+      %w(Valerie Sophie Veronica),
+      %w(John Lisa Don),
+      %w(Elise Daniel Jack),
+      %w(Kevin Boony Sherill),
+      %w(Christy Joan Michael)
     ]
   end
+  def partners user
+    past_groups.select{|group| group.include? user }.reduce([]){|z,c| z << c.reject{|c2| c2.include? user} }.flatten
+  end
+
   def make_groups size=2
     groups = []
     people = @roster.clone
@@ -72,7 +110,7 @@ def initialize
         if group.length == size
           groups.push group
           color = @@colors.sample
-          puts Rainbow("Round #{(i+2)/2}").color(color.to_sym)
+          puts Rainbow("Round #{(i+size)/size}").color(color.to_sym)
           group = [] # reset group to empty array reference
         end
         # if we don't have anyone in our group yet, just

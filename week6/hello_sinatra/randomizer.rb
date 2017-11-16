@@ -3,6 +3,7 @@ require 'rainbow'
 require './roster'
 
 class Cohort
+  attr_reader :roster, :past_groups
   @@mode = :v2
   @@colors = %w(aqua aquamarine mediumaquamarine azure beige bisque blanchedalmond darkblue lightblue mediumblue aliceblue cadetblue dodgerblue midnightblue navyblue powderblue royalblue skyblue deepskyblue lightskyblue slateblue darkslateblue mediumslateblue steelblue lightsteelblue brown rosybrown saddlebrown sandybrown burlywood chartreuse chocolate coral lightcoral cornflower cornsilk crimson darkcyan lightcyan firebrick fuchsia gainsboro gold goldenrod darkgoldenrod lightgoldenrod palegoldenrod gray darkgray dimgray lightgray slategray lightslategray webgray darkgreen lightgreen palegreen darkolivegreen yellowgreen forestgreen lawngreen limegreen seagreen darkseagreen lightseagreen mediumseagreen springgreen mediumspringgreen webgreen honeydew indianred indigo ivory khaki darkkhaki lavender lavenderblush lemonchiffon lime linen darkmagenta maroon webmaroon mintcream mistyrose moccasin oldlace olive olivedrab orange darkorange orchid darkorchid mediumorchid papayawhip peachpuff peru pink deeppink lightpink hotpink plum purple mediumpurple rebeccapurple webpurple darkred orangered mediumvioletred palevioletred salmon darksalmon lightsalmon seashell sienna silver darkslategray snow tan teal thistle tomato turquoise darkturquoise mediumturquoise paleturquoise violet darkviolet blueviolet wheat antiquewhite floralwhite ghostwhite navajowhite whitesmoke lightyellow greenyellow)  
 def initialize

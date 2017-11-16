@@ -1,0 +1,11 @@
+
+
+Decent job on this one guys!
+
+You did miss the requirements for editing and deleting an account, but I'll give you a pass on this one since you implemented an extra feature with CarrierWave and built in password protection for certain resources.
+
+There are aspects of your layout that look quite nice, though on some other pages with sparse content it's strange that there's one long, skinny column that's left aligned leaving most of the page open.  The My Stats link up in the top of the menu doesn't appear to do anything, in which case it should be removed.
+
+Your seed file is referencing a photo on your harddrive, which would throw the following error on any other user's system:
+
+No such file or directory @ rb_sysopen - C:\Users\John Murphy\Desktop\NYCDA\Projects\MobileResponsiveness\book.png

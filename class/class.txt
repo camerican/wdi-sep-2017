@@ -1,5 +1,5 @@
 Kevin	Gallagher	https://ca.slack-edge.com/T03JJLPSP-U6W4SAPRT-835ed0912220-512	kgallagher
-Lisa	Pegher	https://ca.slack-edge.com/T03JJLPSP-U6WT2E4JJ-8f5202eea9c9-512	lisamae
+Lisa	Pegher	https://ca.slack-edge.com/T03JJLPSP-U6WT2E4JJ-8f5202eea9c9-512	lisamae	lisa1357mae
 Mahima	Tuladhar	https://ca.slack-edge.com/T03JJLPSP-U6XC01KA8-394be3c3ce97-512	mahima	Mahima820
 Jason	Calderone	https://ca.slack-edge.com/T03JJLPSP-U6ZECGEUF-0bcc31931324-512	jcalderone	Cgman1375
 Jack	Floyd	https://ca.slack-edge.com/T03JJLPSP-U6VH16CQ1-73d7094a66ba-512	mjfloyd3	mjfloyd3
