@@ -4,6 +4,7 @@ class CreateCourses < ActiveRecord::Migration[5.1]
       t.string :name
       t.text :description
       t.references :instructor, index: true, foreign_key: false
+      t.integer :time_horizon
 
       t.timestamps
     end

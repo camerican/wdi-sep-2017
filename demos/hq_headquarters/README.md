@@ -215,5 +215,13 @@ end
 The configure part tells Carrierwave where to upload the photos to...
 
 
+# Add Quizes Table
+
+First create our migration
+
+```
+rake db:create_migration NAME=add_quizes_table
+```
+
 
 
