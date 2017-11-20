@@ -1,0 +1,8 @@
+source 'http://rubygems.org'
+
+
+gem 'sqlite3'
+gem 'sinatra-activerecord'
+gem 'composite_primary_keys'
+gem 'nokogiri'
+gem 'rake'
