@@ -2,16 +2,15 @@ require './app'
 
 doc = Nokogiri::HTML(open("https://finviz.com/screener.ashx?v=152&f=cap_smallover,fa_pe_profitable,geo_usa,sh_avgvol_o300,sh_opt_option&ft=4"))
 
-pages = doc.at_xpath("//td[child::a[contains(@href,'screener')]][last()][descendant::a[contains(text(),1)]]/descendant::a[last()-1]/text()")
+pages = doc.at_xpath("//td[child::a[contains(@href,'screener')]][last()][descendant::a[contains(text(),1)]]/descendant::a[last()-1]/text()").to_s.to_i
 
 
 
 p "There are #{pages} pages"
 
 
-# pages.to_i.times do |n|
 
-# end
+
 
 # in thousands...
 def process_cap( cap )
@@ -52,4 +51,13 @@ def process_page( doc )
 
 end
 
+#process the first page full
 process_page(doc)
+
+(pages-1).times do |n|
+  sleep (8..15).to_a.sample
+  p "processing page #{n+1}..."
+  process_page Nokogiri::HTML(open("https://finviz.com/screener.ashx?v=152&f=cap_smallover,fa_pe_profitable,geo_usa,sh_avgvol_o300,sh_opt_option&ft=4&r=#{(n+1)*20+1}"))
+end
+
+
